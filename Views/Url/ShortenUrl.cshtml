@@ -1,0 +1,21 @@
+@{
+    ViewData["Title"] = "Encurtar URL";
+}
+
+<h2>Encurtar URL</h2>
+
+<form asp-action="ShortenUrl" method="post">
+    <div>
+        <label for="originalUrl">URL Original:</label>
+        <input type="text" id="originalUrl" name="originalUrl" required />
+    </div>
+    <button type="submit">Encurtar</button>
+</form>
+
+@if (ViewBag.ShortUrl != null)
+{
+    <div>
+        <strong>URL Encurtada:</strong>
+        <a href="@ViewBag.ShortUrl">@ViewBag.ShortUrl</a>
+    </div>
+}

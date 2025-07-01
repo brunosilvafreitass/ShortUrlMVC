@@ -1,0 +1,33 @@
+@model IEnumerable<ShortUrlMvc.Models.UrlModel>
+
+@{
+    ViewData["Title"] = "Lista de URLs Encurtadas";
+}
+
+<h2>Lista de URLs Encurtadas</h2>
+
+<table border="1" cellpadding="5">
+    <thead>
+        <tr>
+            <th>Original</th>
+            <th>Encurtada</th>
+            <th>Código</th>
+            <th>Data de Criação</th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var url in Model)
+    {
+        <tr>
+            <td>
+                <a href="@url.OriginalUrl" target="_blank">@url.OriginalUrl</a>
+            </td>
+            <td>
+                <a href="@url.ShortUrl" target="_blank">@url.ShortUrl</a>
+            </td>
+            <td>@url.ShortCode</td>
+            <td>@url.CreatedAt.ToString("dd/MM/yyyy HH:mm")</td>
+        </tr>
+    }
+    </tbody>
+</table>

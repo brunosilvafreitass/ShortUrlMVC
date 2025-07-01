@@ -1,0 +1,26 @@
+@{
+    ViewBag.Title = "Redirecionando...";
+    var originalUrl = ViewBag.OriginalUrl as string;
+}
+<link rel="stylesheet" href="~/css/redirecting.css" />
+<div class="blur-bg"></div>
+<div class="content">
+    <div class="spinner"></div>
+    <h2>Redirecionando...</h2>
+    <div class="countdown">
+        Redirecionando em <span id="timer">5</span> segundos...
+    </div>
+    <p>Se não for redirecionado, <a href="@originalUrl">clique aqui</a>.</p>
+</div>
+<script>
+    var seconds = 5;
+    var timer = document.getElementById('timer');
+    var interval = setInterval(function () {
+        seconds--;
+        timer.textContent = seconds;
+        if (seconds <= 0) {
+            clearInterval(interval);
+            window.location.href = "@originalUrl";
+        }
+    }, 1000);
+</script>
