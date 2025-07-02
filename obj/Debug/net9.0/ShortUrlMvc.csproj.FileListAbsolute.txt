@@ -108,3 +108,4 @@
 /home/bruno/Documentos/C# Projetos/ShortUrlMvc/obj/Debug/net9.0/ShortUrlMvc.genruntimeconfig.cache
 /home/bruno/Documentos/C# Projetos/ShortUrlMvc/obj/Debug/net9.0/ref/ShortUrlMvc.dll
 /home/bruno/Documentos/C# Projetos/ShortUrlMvc/obj/Debug/net9.0/compressed/uk48wthbzg-rkqe633rrh.gz
+/home/bruno/Documentos/C# Projetos/ShortUrlMvc/obj/Debug/net9.0/ShortUrlMvc.sourcelink.json
